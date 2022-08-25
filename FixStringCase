@@ -1,0 +1,22 @@
+void main(List<String> args) {
+  solve();
+}
+void solve() {
+   print("Please enter The String");
+  String cases = stdin.readLineSync!();
+    var upper = 0;
+    var lower = 0;
+
+    for (var k = 0; k < s.length; k++) {
+        if (cases[k].toUpperCase() == cases[k])
+            upper++;
+        else
+            lower++;
+    }
+
+    if (lower >= upper) {
+      return s.toLowerCase();
+    } else {
+      return s.toUpperCase();
+    }
+}
