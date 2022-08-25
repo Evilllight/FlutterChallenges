@@ -1,0 +1,31 @@
+import 'dart:ffi';
+import 'dart:io';
+
+void main(List<String> args) {
+  calculate();
+}
+
+void calculate(){
+  List<int> weights=[];
+
+  while(true){
+    
+    print("Please enter wieghts");
+    int weight=int.parse(stdin.readLineSync()!);
+    weights.add(weight);
+  print("To exit (0) -- Other numbers to continue ");
+  int out = int.parse(stdin.readLineSync()!) ;
+    if(out==0){
+      print("Exited");
+      break;
+    }
+  }
+  var totalFirst = 0;
+  var totalSecond = 0;
+  for(int i = 0; i < weights.length; i++){
+    i.isEven?totalFirst += weights[i]: totalSecond += weights[i];
+  }
+  print("First Team; $totalFirst, Second Team; $totalSecond");
+
+
+}
