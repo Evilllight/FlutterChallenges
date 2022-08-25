@@ -1,0 +1,19 @@
+
+import 'dart:io';
+
+void main(List<String> args) {
+  XO();
+}
+void XO() {
+  String? str=stdin.readLineSync();
+  var sum = 0;
+  for(var i=0; i<str!.length; i++){
+    if(str[i].toLowerCase() == 'x') sum++;
+    if(str[i].toLowerCase() == 'o') sum--;
+  }
+  if(sum==0){
+    print("True");
+  }else{print("False");}
+ 
+}
+
