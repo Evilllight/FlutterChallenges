@@ -1,0 +1,13 @@
+void main(){
+  valid_spacing();
+}
+bool valid_spacing() {
+    print("Please enter words");
+  String words = stdin.readLineSync()!
+  if (!words.contains(' '))
+    return true;
+  else {
+    if (words[0] == ' ' || words[words.length - 1] == ' ') return false;
+    return !words.contains('  ');
+  }
+}
