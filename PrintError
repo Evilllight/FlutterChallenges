@@ -5,15 +5,15 @@ void main(List<String> args) {
 }
  void printerError() {
   print("Please enter the labels");
-  String? printerInput = stdin.readLineSync();
+  String printerInput = stdin.readLineSync()!;
 
-  var sSplit = printerInput?.split('');
+  var sSplit = printerInput.split('');
   
-  var sLength = sSplit?.length;
+  var sLength = sSplit.length;
   
   var error = 0;
    
-  for(var i in sSplit!){
+  for(var i in sSplit){
     if(i != 'a' && i != 'b'&& i != 'c'&& i != 'd'&& i!= 'e' && i != 'f'&& 
        i != 'g'&& i != 'h'&& i != 'i'&& i != 'j'&& i != 'k'&& i != 'l'&& 
        i != 'm'){
